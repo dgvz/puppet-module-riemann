@@ -1,0 +1,8 @@
+#      THIS FILE IS AUTOMATICALLY DISTRIBUTED BY PUPPET
+#       ANY LOCAL CHANGES WILL BE OVERWRITTEN
+
+[riemann]
+name=Riemann
+baseurl=http://riemannpkgs.hezmatt.org/redhat
+gpgcheck=1
+gpgkey=https://riemannpkgs.hezmatt.org/archive.key

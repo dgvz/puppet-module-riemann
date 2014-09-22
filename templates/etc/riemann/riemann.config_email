@@ -1,0 +1,6 @@
+(mailer {
+<% @riemann_server_mailer.each do |k, v| -%>
+    <%= k.to_sym.inspect %> <%= v.inspect %>
+<% end -%>
+})
+                     
