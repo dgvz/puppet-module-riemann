@@ -13,11 +13,12 @@ define riemann::server(
 	case $::operatingsystem {
 		Debian,Ubuntu: {
 			apt::source { "riemann":
-				location => "http://riemannpkgs.hezmatt.org/debian",
-				release  => "",
-				repos    => "riemann/",
-				require  => Apt::Key["418E2729"],
-				before   => Noop["riemann::server/repo"],
+				location    => "http://riemannpkgs.hezmatt.org/debian",
+				release     => "",
+				repos       => "riemann/",
+				require     => Apt::Key["418E2729"],
+				before      => Noop["riemann::server/repo"],
+				include_src => false,
 			}
 
 			apt::key { "418E2729":
