@@ -1,4 +1,6 @@
 # Install the Riemann tools gem
 class riemann::tools {
-	gem { "riemann-tools": }
+	package { "riemann-tools":
+		provider => gem
+	}
 }
