@@ -16,12 +16,12 @@ define riemann::server(
 				location    => "http://riemannpkgs.hezmatt.org/debian",
 				release     => "",
 				repos       => "riemann/",
-				require     => Apt::Key["418E2729"],
+				require     => Apt::Key["D999D721201EF605AD8B21C3F774BB18418E2729"],
 				before      => Noop["riemann::server/repo"],
 				include_src => false,
 			}
 
-			apt::key { "418E2729":
+			apt::key { "D999D721201EF605AD8B21C3F774BB18418E2729":
 				key_source => "https://riemannpkgs.hezmatt.org/archive.key",
 			}
 		}
